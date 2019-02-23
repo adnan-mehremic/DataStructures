@@ -31,3 +31,13 @@ class BinarySearchTree(object):
 				self.insertNode(data, node.rightChild)
 			else:
 				node.rightChild = Node(data)
+
+	def getMinValue(self):
+		if self.root:
+			return self.getMin(self, root)
+
+	def getMin(self):
+		if node.leftChild:
+			return self.getMin(node.leftChild)
+
+		return node.data
