@@ -41,3 +41,26 @@ class BinarySearchTree(object):
 			return self.getMin(node.leftChild)
 
 		return node.data
+
+	def getMaxValue(self):
+		if self.root:
+			return self.getMax(self.root)
+
+	def getMax(self, node):
+		if node.rightChild:
+			return self.getMax(node.rightChild)
+
+		return node.data
+
+	def traverse(self):
+		if self.root:
+			self.traverseInOrder(self.root)
+
+	def traverseInOrder(self,node):
+		if node.leftChild:
+			self.traverseInOrder(node.leftChild)
+		print("%s " % node.leftChild)
+
+		if node.rightChild:
+			self.traverseInOrder(node.rightChild)
+
